@@ -98,8 +98,8 @@ SOCIAL_AUTH_STRATEGY = 'social_django.strategy.DjangoStrategy'
 SOCIAL_AUTH_STORAGE = 'social_django.models.DjangoStorage'
 
 # new
-SOCIAL_AUTH_GOOGLE_OAUTH2_KEY = '490744177433-s8tbu5c5d90uf21b45puvti5htllu46h.apps.googleusercontent.com'
-SOCIAL_AUTH_GOOGLE_OAUTH2_SECRET = '3AI1QS48Y21kFRx4mURByXtO'
+SOCIAL_AUTH_GOOGLE_OAUTH2_KEY = 'key'
+SOCIAL_AUTH_GOOGLE_OAUTH2_SECRET = 'secret'
 
 # new
 LOGIN_URL = '/accounts/login'

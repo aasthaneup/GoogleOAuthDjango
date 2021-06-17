@@ -20,7 +20,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # See https://docs.djangoproject.com/en/2.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'nb_et6j2i7ug2p*s2ucl2$cx3b$v+p&s#n@u$lgwh^i2*=r$2z'
+SECRET_KEY = 'secretkeygoeshere'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -49,7 +49,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
-    # new
+    # new for oauth
     'social_django.middleware.SocialAuthExceptionMiddleware',
 ]
 
@@ -74,13 +74,13 @@ TEMPLATES = [
     },
 ]
 
-# new
+# new for oauth
 AUTHENTICATION_BACKENDS = (
     'social_core.backends.google.GoogleOAuth2',
     'django.contrib.auth.backends.ModelBackend',
 )
 
-# new
+# new for oauth
 SOCIAL_AUTH_PIPELINE = (
     'social_core.pipeline.social_auth.social_details',
     'social_core.pipeline.social_auth.social_uid',
@@ -93,15 +93,15 @@ SOCIAL_AUTH_PIPELINE = (
     'social_core.pipeline.user.user_details',
 )
 
-# new
+# new for oauth
 SOCIAL_AUTH_STRATEGY = 'social_django.strategy.DjangoStrategy'
 SOCIAL_AUTH_STORAGE = 'social_django.models.DjangoStorage'
 
-# new
+# new for oauth
 SOCIAL_AUTH_GOOGLE_OAUTH2_KEY = 'key'
 SOCIAL_AUTH_GOOGLE_OAUTH2_SECRET = 'secret'
 
-# new
+# new for oauth
 LOGIN_URL = '/accounts/login'
 LOGIN_REDIRECT_URL = '/accounts/profile'
 
